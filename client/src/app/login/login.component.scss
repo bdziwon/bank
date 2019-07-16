@@ -1,0 +1,29 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.example-container > * {
+    width: 100%;
+}
+
+.custom-button {
+      margin-left: 10px;
+}
+
+.custom-table {
+    margin-left: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.error-message {
+    color: red;
+    align-content: center;
+    align-self: center;
+}

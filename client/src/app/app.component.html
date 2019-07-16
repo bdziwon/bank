@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <mat-toolbar color="basic">
+    <span>Mój Bank</span>
+
+    <ul class="nav nav-pills">
+      <button *ngIf="globals.authenticated" mat-flat-button color="link"><a routerLinkActive="active" routerLink="">Strona główna</a></button>
+      <button *ngIf="!globals.authenticated" mat-flat-button color="link"><a routerLinkActive="active" routerLink="/login">Zaloguj się</a></button>
+      <button *ngIf="!globals.authenticated" mat-flat-button color="link"><a routerLinkActive="active" routerLink="/register">Zarejestruj</a></button>
+      <button *ngIf="globals.authenticated" mat-flat-button color="link"><a routerLinkActive="active" (click)="logout()">Wyloguj</a></button>
+    </ul>
+
+  </mat-toolbar>
+
+<router-outlet></router-outlet>
+
+</div>

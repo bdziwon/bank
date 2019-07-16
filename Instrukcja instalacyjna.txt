@@ -1,0 +1,13 @@
+Serwer:
+
+Zalecane srodowisko: Intellij IDEA
+
+1. Zaimportowac projekt korzystajac z opcji "Import project from external model" i wybierajac Maven.
+2. Poczekac na pelne pobranie zaleznosci i uruchomic
+
+Klient:
+
+1. Zainstalowac Node.JS https://nodejs.org/en/
+2. Zainstalowac npm install -g @angular/cli@7.2.0
+3. W cmd, przejsc do glównego katalogu projektu i uruchomic korzystajac z polecenia "ng serve"
+4. Wejsc na strone localhost:4200 w przegladarce.

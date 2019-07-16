@@ -1,0 +1,14 @@
+<h1>Witaj {{userInfo.name}} {{userInfo.surname}}</h1>
+<div>
+	<p>Nazwa użytkownika: {{userInfo.login}} </p>
+	<p>Numer konta: {{userInfo.number}} </p>
+	<p>Uprawnienia: {{userInfo.role}}</p>
+	<p>Typ konta: {{userInfo.accountType}}</p>
+	<p>Stan konta: {{userInfo.balance}} zł.</p>
+	<p>Typ konta: {{userInfo.accountType}}</p>
+	<p>Data utworzenia konta: {{userInfo.creationDate}}</p>
+	
+</div>
+
+	<button *ngIf="!transferHidden" mat-raised-button class="custom-button"><a routerLinkActive="active" routerLink="/transfer">Wyślij przelew</a></button>
+	<button mat-raised-button class="custom-button"><a routerLinkActive="active" routerLink="/transactions">Historia transakcji</a></button>

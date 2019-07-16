@@ -1,0 +1,22 @@
+<h1>
+  Twoje transakcje
+</h1>
+
+
+<mat-list role="list">
+  <mat-list-item class="transaction-list-item" role="listitem" *ngFor="let transaction of transactions">
+    <mat-divider></mat-divider>
+    <h2 matLine class="transaction-title"> {{transaction.title}} </h2>
+    <p matLine class='transaction-line'>
+      <span> Przelew od użytkownika <b>{{transaction.fromAccount.name}}  {{transaction.fromAccount.surname}} </b> dla użytkownika <b>{{transaction.toAccount.name}} {{transaction.toAccount.surname}} </b>  </span>
+    </p>
+    <p matLine class='transaction-line'>
+        <span> Wartość: <b> {{transaction.value}} zł. </b> </span>
+    </p>
+    <p matLine class='transaction-line'>
+        <span> Status realizacji: <b> {{transaction.realizationStatus}} </b> </span>
+    </p>
+
+
+  </mat-list-item>
+</mat-list>

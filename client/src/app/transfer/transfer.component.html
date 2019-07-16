@@ -1,0 +1,25 @@
+
+<p class = "error-message">{{paragraphText}}</p>
+
+<form role="form" (submit)="transfer()">
+    <table mat-table class="custom-table">
+      <tr>
+        <mat-form-field>
+          <input matInput placeholder="Tytuł przelewu" [(ngModel)]="transferData.title" name = "title">
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Docelowy numer konta" [(ngModel)]="transferData.toAccount" name = "toAccount">
+        </mat-form-field>
+      </tr>
+      <tr>
+          <mat-form-field>
+            <input matInput type="number" placeholder="Wartość" [(ngModel)]="transferData.amount" name = "amount">
+          </mat-form-field>
+      </tr>
+      <tr>
+        <button mat-raised-button class="custom-button" ng-click="transfer()">Wyślij przelew</button>
+      </tr>
+    </table>
+  </form>

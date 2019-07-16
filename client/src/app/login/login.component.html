@@ -1,0 +1,23 @@
+
+
+
+<p class = "error-message">{{paragraphText}}</p>
+
+<form role="form" (submit)="login()">
+	<table mat-table class="custom-table">
+		<tr>
+			<mat-form-field>
+				<input matInput placeholder="Login" [(ngModel)]="credentials.username" name = "username">
+			</mat-form-field>
+		</tr>
+		<tr>
+			<mat-form-field>
+				<input type="password" matInput placeholder="Hasło" [(ngModel)]="credentials.password" name = "password">
+			</mat-form-field>
+		</tr>
+		<tr>
+			<button mat-raised-button class="custom-button" type="submit">Zaloguj</button>
+			<button mat-raised-button class="custom-button"><a routerLinkActive="active" routerLink="/register">Rejestracja</a></button>
+		</tr>
+	</table>
+</form>

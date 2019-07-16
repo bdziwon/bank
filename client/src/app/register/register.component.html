@@ -1,0 +1,43 @@
+
+<p class = "error-message">{{paragraphText}}</p>
+
+<form role="form" (submit)="register()">
+    <table mat-table class="custom-table">
+      <tr>
+        <mat-form-field>
+          <input matInput placeholder="Login" [(ngModel)]="registerData.login" name = "login">
+        </mat-form-field>
+      </tr>
+      <tr>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Hasło" [(ngModel)]="registerData.password" name = "password">
+        </mat-form-field>
+      </tr>
+      <tr>
+          <mat-form-field>
+            <input matInput type="password"  placeholder="Powtórz hasło" [(ngModel)]="registerData.repeatPassword" name = "password">
+          </mat-form-field>
+        </tr>
+      <tr>
+          <mat-form-field>
+            <input matInput placeholder="Imię" [(ngModel)]="registerData.name" name = "Imię">
+          </mat-form-field>
+      </tr>
+      <tr>
+          <mat-form-field>
+            <input matInput placeholder="Nazwisko" [(ngModel)]="registerData.surname" name = "Nazwisko">
+          </mat-form-field>
+        </tr>
+
+        <tr>
+            <mat-select name="matSelect" class="mat-select-content" [(ngModel)]="registerData.accountType" placeholder="Typ konta">
+                <mat-option class="mat-select-content" *ngFor="let selectOption of selectOptions" [value]="selectOption.value">
+                  {{selectOption.viewValue}}
+                </mat-option>
+              </mat-select>
+        </tr>
+      <tr>
+        <button mat-raised-button class="custom-button" ng-click="register()">Rejestracja</button>
+      </tr>
+    </table>
+  </form>
